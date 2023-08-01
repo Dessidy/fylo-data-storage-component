@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+
+  <title>Frontend Mentor | Fylo data storage component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { 
+      font-size: 14px; 
+      text-align: center;
+      margin-top: 6rem; 
+    }
+    .attribution a { color: #fff; }
+  </style>
+</head>
+<body>
+  <main class="fylo_container">
+    <section class="fylo_section fylo_icon_section">
+      <div class="fylo_img_comtainer fylo_icon_section">
+        <img src="logo.svg" alt="Fylo logo" class="fylo_img">
+      </div>
+
+      <div class="icon_img_container">
+        <div class="icon_holder">
+          <img src="icon-document.svg" alt="document" class="icon">
+        </div>
+
+        <div class="icon_holder">
+          <img src="icon-folder.svg" alt="Folder" class="icon">
+        </div>
+
+        <div class="icon_holder">
+          <img src="icon-upload.svg" alt="Upload" class="icon">
+        </div>
+
+      </div>
+    </section>
+
+<!-- --------------------------------------------------------------------------- -->
+
+    <section class="fylo_section fylo_content_section">
+      <div class="data_used">
+        You've used <strong>815 GB</strong> of your storage
+      </div>
+
+      <div class="bar">
+        <div class="bar_gradient">
+          <div class="ball"></div>
+        </div>
+      </div>
+
+      <div class="range_container">
+        <div class="range_1">
+          <strong> 0 GB</strong>
+        </div>
+        <div class="range_2">
+          <strong> 1000 GB</strong>
+        </div>
+      </div>
+      
+      <div class="data_left_section">
+        <div class="data_left">
+          <h1 class="data_heading"> <strong>185</strong></h1>
+          <p class="data_sub_heading">GB LEFT</p>
+        </div>
+        
+        <div class="triangle_media_only"></div>
+      </div>
+      
+    </section>
+  </main>
+
+  <div class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="#">Desmond Cassidy</a>.
+      </div>
+</body>
+</html>

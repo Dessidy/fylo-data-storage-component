@@ -1,0 +1,241 @@
+/* imported fonts */
+@font-face {
+    font-family: raleway;
+    src: url(Raleway-VariableFont_wght.ttf);
+}
+
+/* ======================================================================== */
+
+/* root variables */
+:root {
+    /* colors */
+    --clr-Gradient-1: hsl(6, 100%, 80%);
+    --clr-Gradient-2:  hsl(335, 100%, 65%);
+    --clr-Pale-Blue: hsl(243, 100%, 93%);
+    --clr-Grayish-Blue: hsl(229, 7%, 55%);
+    --clr-section-bg: hsl(228, 56%, 26%);
+    --clr-icon-bg: hsl(229, 57%, 11%);
+
+    /* font weights */
+    --fw-small: 400;
+    --fw-big: 700;
+}
+
+/* ============================================================================ */
+
+/* CSS Reset */
+*,
+*::before,
+*::after {
+    margin: 0;
+	padding: 0;
+	box-sizing: border box;
+	word-wrap: break-word;
+}
+
+/* ======================================================================= */
+
+/* main Containers */
+
+body {
+    background-image: url(bg-mobile.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top 0vh right 0vw;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+
+    font-weight: var(--fw-small);
+    font-size: 14px;
+    font-family: raleway;
+
+    padding: 1rem;
+}
+
+/* ----------------------------------- */
+.fylo_container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.fylo_section {
+    background: var(--clr-section-bg);
+    padding: 3rem;
+    padding-right: 6rem;
+    border-radius: .8rem;
+}
+
+/* =============================================================== */
+
+/* Sections */
+
+/* Fylo Icon Section */
+.fylo_icon_section {
+    display: grid;
+    gap: 2rem;
+
+    border-top-right-radius: 7rem;
+}
+
+.fylo_icon_section .icon_img_container {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.fylo_icon_section .icon_holder {
+    background: var(--clr-icon-bg);
+    border-radius: .5rem;
+    padding: .9rem;
+}
+
+/* ----------------------------------------------- */
+
+/* fylo content section */
+.fylo_content_section {
+    position: relative;
+    color: var(--clr-Pale-Blue);
+    padding: 2rem;
+    display: grid;
+    gap: 1rem;
+    padding-bottom: 4rem;
+}
+
+.fylo_content_section .data_used {
+    text-align: center;
+}
+
+
+.fylo_content_section .bar {
+    background: var(--clr-icon-bg);
+    border-radius: 2rem;
+    overflow: hidden;
+}
+
+.fylo_content_section .bar .bar_gradient {
+    background-image: linear-gradient(90deg, 
+    var(--clr-Gradient-1), 
+    var(--clr-Gradient-2));
+    width: 70%;
+    border-radius: 1rem;
+    padding: .2rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.fylo_content_section .bar .ball {
+    background: var(--clr-Pale-Blue);
+    width: 1rem;
+    height: 1rem;
+    border-radius: 50%;
+}
+
+
+.fylo_content_section .range_container {
+    display: flex;
+    gap: 65%;
+}
+
+/* -------------------------------------------------- */
+
+.data_left_section {
+    position: absolute;
+    top: 8.5rem;
+    left: 3rem;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.data_left_section .data_left {
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6rem;
+
+    padding: 1rem 2rem;
+    border-radius: .6rem;
+
+    font-weight: var(--fw-big);
+}
+
+.data_left_section .data_heading {
+    font-size: 2.8rem;
+    color: var(--clr-icon-bg);
+}
+
+.data_left_section .data_sub_heading {
+    color: var(--clr-Grayish-Blue);
+}
+
+/* =============================================================================== */
+
+/* Media Query */
+@media (min-width:750px) {
+    body {
+        background: var(--clr-icon-bg);
+        background-image: url(bg-desktop.png);
+        background-position-y: bottom;
+        background-size: unset;
+        background-repeat: no-repeat;
+    }
+
+    .fylo_container {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+
+        width: 80%;
+    }
+
+    .fylo_container .fylo_content_section {
+        width: 100%;
+        padding: 2rem;
+
+        display: grid;
+        gap: 1.5rem;
+    }
+
+    .fylo_content_section .data_used {
+        text-align: left;
+    }
+
+    .fylo_content_section .range_container {
+        display: flex;
+        gap: 80%;
+    }
+
+    .fylo_content_section .data_left_section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        left: unset;
+        right: 2rem;
+        top: -38%;
+    }
+
+    .data_left_section .data_left {
+        border-bottom-right-radius: 0rem;
+    }
+
+    .fylo_content_section .triangle_media_only {
+        display: block;
+        width: 0;
+        height: 0;
+        border-right: 1.2rem solid #fff;
+        border-top: 1.2rem solid #fff;
+        border-bottom: 1.2rem solid transparent;
+        border-left: 1.2rem solid transparent;       
+    }
+}
